@@ -1,5 +1,9 @@
-const contact = [];
-let id = 1;
+const contact = [
+    {id: 1 , name: "Đỗ Ngọc Dân", email:"ngocdan191026@gmail.com",phone: "0354744360"},
+    {id: 2 , name: "Trần văn Thắng", email:"tranvanthang@gmail.com",phone: "0382342749"},
+    {id: 3 , name: "Trần Quang Duy", email:"tranquangduy@gmail.com",phone: "03829035643"}
+];
+let id = 4;
 let cout = false;
 let choice;
 let menu = `
@@ -46,11 +50,11 @@ while (choice !== 6) {
         case 4:
             let checkID = +prompt("nhap id nhan vien can sua luong");
             cout = false;
-            for (let i = 0; i < crud.length; i++) {
-                if (checkID == crud[i].id) {
-                    crud[i].name = prompt("nhap ten san pham duoc cap nhat");
-                    crud[i].email = prompt("nhap email duoc cap nhat");
-                    crud[i].phone = prompt("nhap so dien thoai duoc cap nhat");
+            for (let i = 0; i < contact.length; i++) {
+                if (checkID == contact[i].id) {
+                    contact[i].name = prompt("nhap ten san pham duoc cap nhat");
+                    contact[i].email = prompt("nhap email duoc cap nhat");
+                    contact[i].phone = prompt("nhap so dien thoai duoc cap nhat");
                     cout = true;
                 }
             }
